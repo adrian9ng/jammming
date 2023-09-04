@@ -1,0 +1,13 @@
+.SearchResults{
+    width: 45%;
+    margin-left: 5%;
+    height: auto;
+    background-color: rgba(173, 255, 47, 0.75);
+    padding: 1% 1.5vw;
+    border-radius: 1vw;
+  }
+
+  h2{
+    color: white;
+    font-size: 175%;
+  }

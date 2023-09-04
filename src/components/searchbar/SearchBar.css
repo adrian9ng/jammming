@@ -1,0 +1,31 @@
+.SearchBar{
+    text-align: center;
+    padding: 3vw 0;
+}
+
+.SearchBar input{
+    width: 50vw;
+    height: 50px;
+    border-radius: 0.33vw;
+    padding: 0 1vw;
+    box-sizing: border-box;
+    background-color: white;
+    margin-right: 1.5vw;
+}
+.SearchBar input:focus{
+    border: 0.3vw solid mediumslateblue;
+}
+
+.SearchBar button{
+    background-color: white;
+    padding: 0 1vw;
+    height: 50px;
+    width: auto;
+    margin-left: 1.5vw;
+    border-radius: 0.33vw;
+}
+
+.SearchBar button:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}

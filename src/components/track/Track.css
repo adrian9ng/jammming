@@ -1,0 +1,45 @@
+*{
+    border: 1px solid black;
+}
+
+.track{
+    background-color: rgba(0, 255, 0, 0.75);
+    border: 1px solid black;
+    padding: 2%;
+    margin: 2% 0;
+    border-radius: 0.5vw;
+    display: inline-flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+
+h3{
+    color: white;
+    font-weight: bold;
+}
+
+p{
+    color: white;
+    
+}
+
+.trackAction{
+    /* background-color: red; */
+    
+}
+
+.trackAction button{
+    background-color: white;
+    width: 50px;
+    height: 100%;
+    border-radius: 0.5vw;
+    font-size: 30px;
+    padding-bottom: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+.trackAction button:hover{
+    background-color: lightgray;
+    cursor: pointer;
+}
