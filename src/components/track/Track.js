@@ -4,16 +4,15 @@ import "./Track.css"
 function Track(props){
 
     const removeTrack = (e) => {
-        alert("minus clicked");
+        props.onRemove(props.track)
     }
 
     const addTrack = (e) => {
-        console.log(props.track);
         props.onAdd(props.track);
     }
 
     const renderAction = () => {
-        if(props.isRemoval){
+        if(props.isRemove){
             return (
                 <button onClick={removeTrack}>-</button>
             )
