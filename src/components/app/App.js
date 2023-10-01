@@ -7,7 +7,7 @@ import "./reset.css"
 import './App.css';
 
 function App() {
-  const [tracks, setTracks] = useState([]); //{name: "TT", artist: "TWICE", album: "Twicecoaster Lane 1", id: 1, uri: "spotify:track:6rqhFgbbKwnb9MLmUQDhG6"}, {name: "Knock Knock", artist: "TWICE", album: "Twicecoaster Lane 2", id: 2, uri: "spotify:track:6rqhFgbbjFEf345mUQ35ht"}, {name: "Cheer Up", artist: "TWICE", album: "Page Two", id: 3, uri: "spotify:track:f3qhFgbbKESgyu3jtf4"}
+  const [tracks, setTracks] = useState([]);
   const [playlistTracks, setPlaylistTracks] = useState([]);
   const [playlistName, setPlaylistName] = useState("New Playlist");
 
@@ -33,9 +33,11 @@ function App() {
 
   const savePlaylist = () => {
     const uriList = playlistTracks.map((track) => track.uri);
-    setPlaylistName("New Playlist");
-    setPlaylistTracks([]);
-  }
+    Spotify.savePlaylist(playlistName, uriList).then(()=>{
+      setPlaylistName("New Playlist");
+      setPlaylistTracks([]);
+    });
+  };
 
   return (
     <div>

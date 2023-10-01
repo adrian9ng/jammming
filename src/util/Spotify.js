@@ -49,7 +49,34 @@ const Spotify = {
                     uri: track.uri
                 }));
             })
+    },
+
+    savePlaylist(playlistName, uriList){
+        if (!playlistName || !uriList){
+            return;
+        } // if no values for either, return nothing
+
+        const accessToken = Spotify.getAccessToken();
+        let userId;
+
+        return fetch("https://api.spotify.com/v1/me", {headers: {Authorization: "Bearer " + accessToken}} //returns username
+        ).then(response => response.json() //turns response to json
+        ).then(jsonResponse => {
+            userId = jsonResponse.id;
+            return fetch("https://api.spotify.com/v1/users/" + userId + "/playlists", {
+                headers: {Authorization: "Bearer " + accessToken},
+                method: "POST",
+                body: JSON.stringify({name: playlistName})
+            }).then(response => response.json()
+            ).then(jsonResponse => {
+                const playlistId = jsonResponse.id;
+                return fetch("https://api.spotify.com/v1/users/" + userId + "/playlists/" + playlistId + "/tracks", {
+                    headers: {Authorization: "Bearer " + accessToken},
+                    method: "POST",
+                    body: JSON.stringify({uris: uriList})
+                });
+            });
+        })
     }
 };
-
 export default Spotify;

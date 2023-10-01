@@ -11,6 +11,7 @@
     box-sizing: border-box;
     background-color: white;
     margin-right: 1.5vw;
+    font-size: 30px;
 }
 .SearchBar input:focus{
     border: 0.3vw solid mediumslateblue;
