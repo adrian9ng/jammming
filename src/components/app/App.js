@@ -42,7 +42,7 @@ function App() {
   return (
     <div>
       <header>
-        <h1>Jammming</h1>
+        <h1>Ja<span>mmm</span>ing</h1>
       </header>
       <main>
         <SearchBar onSearch={search}/>
@@ -50,7 +50,6 @@ function App() {
           <SearchResults tracks={tracks} onAdd={addTrack}/>
           <Playlist tracks={playlistTracks} onRemove={removeTrack} onNameChange={updatePlaylistName} onSave={savePlaylist}/>
         </div>
-        
       </main>
     </div>
   );
