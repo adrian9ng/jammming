@@ -48,5 +48,7 @@ p{
         font-size: 80%;
     }
 
-
+    .track{
+        border-radius: 2vw;
+    }
 }
