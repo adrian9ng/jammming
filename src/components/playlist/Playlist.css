@@ -53,5 +53,6 @@
   .saveButton button{
     margin-top: 10px;
     font-size: 80%;
+    border-radius: 1.25vw;
   }
 }
