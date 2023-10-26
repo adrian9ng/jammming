@@ -13,7 +13,7 @@ function SearchBar(props){
         <div className="SearchBar">
             <input 
                 type="text" 
-                placeholder="Enter a song to search"
+                placeholder="Enter a song, artist or album"
                 onChange={(e) => setInput(e.target.value)}
             />
             <button onClick={search}>Search</button>
